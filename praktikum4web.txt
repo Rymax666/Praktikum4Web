@@ -1,0 +1,107 @@
++++ Tugas 1 +++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+        $AdityaR ="Bendy Cakep";
+        echo "Nama panggilan dari \$AdityaR adalah ".$AdityaR;
+    ?>
+
+</body>
+</html>
+----------------------------------------------------------------------------
++++ Tugas 2 +++
+<?php
+    $kewan["pertama"] = "Anjink";
+    $kewan["kedua"] = "Buayak";
+    $kewan["ketiga"] = "Koochenk";
+
+    echo $kewan["pertama"];
+    echo "<br>";
+    echo $kewan["kedua"];
+    echo "<br>";
+    echo $kewan["ketiga"];
+?>
+----------------------------------------------------------------------------
++++ Tugas 3 +++
+<?php
+    function penjumlahan($a, $b){
+        $aa = $a + $b;
+        echo "Penjumlahan $a + $b = ".$aa;
+        echo "<br>";
+        echo "<br>";
+    }
+
+    function pengurangan($c, $d){
+        $cc = $c - $d;
+        echo "Pengurangan $c - $d = ".$cc;
+        echo "<br>";
+        echo "<br>";
+    }
+
+    function pembagian($e, $f){
+        $ee = $e / $f;
+        echo "Pembagian $e / $f = ".$ee;
+        echo "<br>";
+        echo "<br>";
+    }
+
+    function perkalian($g, $h){
+        $gg = $g * $h;
+        echo "Perkalian $g x $h = ".$gg;
+        echo "<br>";
+        echo "<br>";
+    }
+
+
+    penjumlahan(20,30);
+    pengurangan(20,30);
+    pembagian(10,2);
+    perkalian(10,10);
+?>
+----------------------------------------------------------------------------
++++ Tugas 4 +++
+<?php
+    $nama = "";
+    $nim = "";
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        $nama = $_POST["nama"];
+        $nim = $_POST["nim"];
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>PENDAFTARAN PAITIA HARI KIAMAT</h2>
+<form action="index.php" method="post">
+      Nama : <input type="text" name="nama">
+      <br>
+      Nim &nbsp;&nbsp;&nbsp;: <input type="text" name="nim">
+      <br>
+      <br>
+      <input type="submit" value="Proses Data" name="submit">
+      <br>
+    <?php
+    if(isset($_POST['submit'])){
+        echo "<br>";
+        echo "Nama : ".$nama;
+        echo "<br>";
+        echo "Nim  : ".$nim;
+        echo "<br>";
+    }
+     ?>
+</body>
+</html>
+----------------------------------------------------------------------------
+
